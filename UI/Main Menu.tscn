@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://UI/Main Menu.gd" type="Script" id=1]
+[ext_resource path="res://Enemy/FFF_NEPSZA-BADSAG-Bold.otf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 37
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 70
+font_data = ExtResource( 2 )
+
+[node name="Main Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 1.0
+margin_top = 220.0
+margin_right = 1025.0
+margin_bottom = 283.0
+custom_fonts/font = SubResource( 1 )
+text = "This is Michael Betar's 5th Project for Game Tech..."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 400.0
+margin_top = 281.0
+margin_right = 629.0
+margin_bottom = 358.0
+custom_fonts/font = SubResource( 2 )
+text = "START"
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
